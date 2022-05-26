@@ -1,0 +1,13 @@
+{% extends "meublog/base.html" %}
+
+{% block titulo %} Cadastro de Usuário {% endblock %}
+
+{% block conteudo %}
+    <div class="container">
+        <form method="post" action="{% url 'meublog:cadastrouser' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+{% endblock %}

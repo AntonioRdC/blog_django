@@ -1,0 +1,6 @@
+venv/
+.idea/
+*.pyc
+__pychace__
+.DS_store
+*.*~

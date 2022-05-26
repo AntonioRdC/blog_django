@@ -1,0 +1,16 @@
+{% extends "meublog/base.html" %}
+
+{% block titulo %}
+   Enviando o post {{ post.titulo }}
+{% endblock %}
+
+{% block conteudo %}
+    <h1>
+        Enviar post: {{ post.titulo }} por e-mail
+    </h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

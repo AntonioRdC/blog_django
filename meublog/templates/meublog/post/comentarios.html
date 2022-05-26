@@ -1,0 +1,20 @@
+{% extends "meublog/base.html" %}
+
+{% block titulo %}
+    Comentário post {{ post.slug }}
+{% endblock %}
+
+{% block conteudo %}
+{% if user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Salvar">
+    </form>
+{% else %}
+    <h3>Disponível apenas para usuários autenticados</h3>
+    <a class="btn btn-primary" href="{% url 'meublog:listar_posts' %}">
+        voltar
+    </a>
+{% endif %}
+{% endblock %}

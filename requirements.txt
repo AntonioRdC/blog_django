@@ -1,0 +1,8 @@
+asgiref
+dj-static
+Django
+gunicorn
+mysqlclient
+pytz
+sqlparse
+static3
